@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #450a0a;
+    color: white;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/* Trailer Section */
+.trailer {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.trailer h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* Combo Section */
+.combo {
+    background-color: #7f1d1d;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.combo h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.combo-card {
+    max-width: 28rem;
+    margin: 0 auto;
+    background-color: #991b1b;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.combo-card:hover {
+    transform: scale(1.05);
+}
+
+.combo-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.combo-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.combo-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.combo-card li {
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.note {
+    color: #fca5a5;
+}
+
+/* Seats Section */
+.seats {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.seats h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.seat-icon {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 2rem;
+}
+
+.seat-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.theater {
+    background-color: rgba(127, 29, 29, 0.5);
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.screen {
+    margin-bottom: 3rem;
+}
+
+.screen-line {
+    width: 10rem;
+    height: 0.25rem;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 0.25rem;
+}
+
+.screen p {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+.seat {
+    background-color: #991b1b;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.seat:hover {
+    transform: scale(1.05);
+}
+
+.seat i {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.seat span {
+    font-weight: bold;
+    display: block;
+}
+
+.seat p {
+    font-size: 0.75rem;
+    color: #fca5a5;
+}
+
+.seat-note {
+    font-size: 0.875rem;
+    color: #fca5a5;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+/* RSVP Section */
+.rsvp {
+    background-color: #7f1d1d;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.rsvp h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn i {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.btn-yes {
+    background-color: #16a34a;
+    color: white;
+}
+
+.btn-yes:hover {
+    background-color: #15803d;
+}
+
+.btn-no {
+    background-color: #dc2626;
+    color: white;
+}
+
+.btn-no:hover {
+    background-color: #b91c1c;
+}
+
+#response-message {
+    margin: 1.5rem 0;
+}
+
+.response-yes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #4ade80;
+}
+
+.response-no {
+    color: #f87171;
+}
+
+.responses-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #fca5a5;
+    text-decoration: underline;
+}
+
+.responses-link:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .date {
+        font-size: 1rem;
+    }
+
+    .trailer h2,
+    .combo h2,
+    .seats h2,
+    .rsvp h2 {
+        font-size: 1.75rem;
+    }
+
+    .combo-card {
+        padding: 1.5rem;
+    }
+
+    .combo-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .combo-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .price {
+        font-size: 1.75rem;
+    }
+
+    .seat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .seat {
+        padding: 0.75rem;
+    }
+
+    .seat-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .seat-description {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 20rem;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .screen-line {
+        width: 8rem;
+    }
+
+    .theater {
+        padding: 1.5rem 0.5rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .seat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .seat i {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .combo-card {
+        padding: 1rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}

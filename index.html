@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITAN AMERICA UN NUEVO MUNDO - Invitación Especial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="png-clipart-captain-america-shield-captain-america-s-shield-hulk-iron-man-s-h-i-e-l-d-captain-america-captain-america-s-shield-hulk-thumbnail.png">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <img src="trailer-capitan-america-mundo-estrena.webp" alt="Movie Theater">
+            <div class="hero-content">
+                <h1>CAPITAN AMERICA UN NUEVO MUNDO</h1>
+                <p class="subtitle">¡Estás invitada a la función especial!</p>
+                <div class="date">
+                    <i data-lucide="calendar"></i>
+                    <span>Sábado 15 de Febrero - 10:00 AM</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trailer Section -->
+        <section class="trailer">
+            <h2>Trailer Oficial</h2>
+            <div class="video-container">
+                <iframe
+                    src="CAPITÁN AMÉRICA_ UN NUEVO MUNDO Tráiler 2 Español Latino (2025).mp4"
+                    title="Red Hulk Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Combo Section -->
+        <section class="combo">
+            <h2>Combo Especial</h2>
+            <div class="combo-card">
+                <i data-lucide="popcorn" class="combo-icon"></i>
+                <h3>Combo Doble Red Hulk</h3>
+                <ul>
+                    <li>1 Palomitas grandes</li>
+                    <li>2 Refrescos grandes</li>
+                    <li>2 Hot dogs</li>
+                </ul>
+                <p class="note">¡Perfecto para compartir!</p>
+            </div>
+        </section>
+
+        <!-- Seats Section -->
+        <section class="seats">
+            <h2>Asientos Premium - Zona Alta</h2>
+            <i data-lucide="sofa" class="seat-icon"></i>
+            <p class="seat-description">Disfruta de la mejor vista desde nuestros asientos premium en la zona alta</p>
+            
+            <div class="theater">
+                <div class="screen">
+                    <div class="screen-line"></div>
+                    <p>PANTALLA</p>
+                </div>
+                <div class="seat-grid">
+                    <div class="seat" data-seat="H1">
+                        <i data-lucide="sofa"></i>
+                        <span>H1</span>
+                        <p>Premium</p>
+                    </div>
+                    <div class="seat" data-seat="H2">
+                        <i data-lucide="sofa"></i>
+                        <span>H2</span>
+                        <p>Premium</p>
+                    </div>
+                    <div class="seat" data-seat="H3">
+                        <i data-lucide="sofa"></i>
+                        <span>H3</span>
+                        <p>Premium</p>
+                    </div>
+                    <div class="seat" data-seat="H4">
+                        <i data-lucide="sofa"></i>
+                        <span>H4</span>
+                        <p>Premium</p>
+                    </div>
+                   
+                </div>
+            </div>
+            <p class="seat-note">Los asientos H1-H4 ofrecen la mejor vista panorámica de la sala</p>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="rsvp">
+            <h2>¿Quieres asistir?</h2>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="handleResponse('yes')">
+                    <i data-lucide="thumbs-up"></i>
+                    ¡Sí, quiero ir!
+                </button>
+                <button class="btn btn-no" onclick="handleResponse('no')">
+                    <i data-lucide="thumbs-down"></i>
+                    No puedo ir
+                </button>
+            </div>
+            <div id="response-message"></div>
+        </section>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        function handleResponse(answer) {
+            const messageDiv = document.getElementById('response-message');
+            if (answer === 'yes') {
+                messageDiv.innerHTML = `
+                    <div class="response-yes">
+                        <i data-lucide="party-popper"></i>
+                        <span>¡Genial! ¡Te esperamos este sábado!</span>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="response-no">
+                        <span>¡Una lástima! Esperamos verte en la próxima</span>
+                    </div>
+                `;
+            }
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
